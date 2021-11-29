@@ -1,0 +1,95 @@
+<?php
+//technologies involved : PHP, POSTGRESQL DATABASE, HOSTGATOR - FTP SERVER, CSV FILE - EXCEL , FUNCTIONS fopen and fputcsv
+//first start connection with database *** primeiramente inicie conexão com o banco de dados
+//internal connection to database *** para conexão interna informe o host, porta, nome do banco, usuário e senha
+
+$strconect = "host=@@@@ port=@@@@ dbname=@@@@ user=@@@@ password=@@@@"; //internal connection to database *** conexão interna
+$postgres = pg_connect($strconect) or die ("could not connect to PostGreSQL server"); //start connection or die *** inicia conexão ou 'morre'
+
+//your query *** escreva sua consulta 
+$sql = "SELECT * FROM ..
+WHERE .. 
+ORDER BY ...";
+
+//get result *** pega o resultado da query
+$query = pg_query($postgres,$sql);
+
+if (!$query) die('could not connect to database!');
+
+//get result lines *** pega o resultado 
+$arrays = array();
+if (pg_num_rows($query) > 0) {
+    while ($row = pg_fetch_assoc($query)) {
+        $arrays[] = $row;
+    }
+}
+//get time *** pega o tempo da zona selecionada
+date_default_timezone_set('America/Belem');
+
+//get current script execution date *** pega data atual de execução do script
+$today = date('d-m-Y_H:i'); 
+
+//define file name *** atribuir nome ao arquivo
+$name = 'filenameaxample_'.$today.'.csv'; //result example: $name = filenameexample_29-11-2021_6:48.csv
+
+//open or create csv file in ftp server *** abrir ou criar um arquivo csv no servidor ftp
+$output = fopen('ftp://username:password@ftp.serverexample.com/'.$name,'w');
+
+//putting header first *** colocando o cabeçalho primeiro
+fputcsv($output, array('header1', 'header2', 'header3',...,'headern'));
+
+//adjusting query results *** ajustando resultados da consulta
+if ($arrays > 0) {
+    foreach ($arrays as $row) {
+        fputcsv($output, $row); //write in csv file *** escrevendo no arquivo csv
+    }
+}
+
+fclose($output); //close file ***  fecha arquivo
+
+exit;
+
+?>  
+//below clear code *** abaixo o código limpo sem explicação
+<?php
+$strconect = "host=@@@@ port=@@@@ dbname=@@@@ user=@@@@ password=@@@@";
+$postgres = pg_connect($strconect) or die ("could not connect to PostGreSQL server");
+
+$sql = "SELECT * FROM ..
+WHERE .. 
+ORDER BY ...";
+
+
+$query = pg_query($postgres,$sql);
+if (!$query) die('could not connect to database!');
+
+
+$arrays = array();
+if (pg_num_rows($query) > 0) {
+    while ($row = pg_fetch_assoc($query)) {
+        $arrays[] = $row;
+    }
+}
+
+date_default_timezone_set('America/Belem');
+$today = date('d-m-Y_H:i'); 
+$name = 'filenameaxample_'.$today.'.csv';
+
+$output = fopen('ftp://username:password@ftp.serverexample.com/'.$name,'w');
+
+fputcsv($output, array('header1', 'header2', 'header3',...,'headern'));
+
+if ($arrays > 0) {
+    foreach ($arrays as $row) {
+        fputcsv($output, $row);
+    }
+}
+
+fclose($output);
+
+exit;
+
+?> 
+
+
+
