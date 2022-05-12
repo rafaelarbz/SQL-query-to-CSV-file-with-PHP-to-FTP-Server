@@ -18,4 +18,4 @@
 >   - PostgreSQL 
 >   - Hostgator (FTP Server)
 >   - Excel (.csv)
->   - Functions PHP: fopen & fputcsv
+>   - PHP Functions: fopen & fputcsv
