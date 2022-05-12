@@ -11,8 +11,8 @@
 
 > ## English
 > - Objective
->   - Gerar um arquivo CSV com dados resultantes de uma consulta no banco de dados.
->   - Salvar arquivo gerado em uma pasta no servidor responsável por hospedar o site(neste caso o Hostgator). 
+>   - Create a CSV file with data resulting from a database query.
+>   - Save the CSV file in a folder on the server responsible for hosting the site (in this case Hostgator). 
 > - Technologies
 >   - PHP
 >   - PostgreSQL 
