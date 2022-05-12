@@ -1,6 +1,5 @@
 > ## Português
 > - Objetivo
->>> -
 > - Tecnologias
 
 > ## English
