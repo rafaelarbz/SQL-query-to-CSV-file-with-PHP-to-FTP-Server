@@ -19,3 +19,5 @@
 >   - Hostgator (FTP Server)
 >   - Excel (.csv)
 >   - PHP Functions: fopen & fputcsv
+
+###### Desenvolvido por [Rafaela Rabelo](https://linkedin.com/in/rafaelarsouza).
