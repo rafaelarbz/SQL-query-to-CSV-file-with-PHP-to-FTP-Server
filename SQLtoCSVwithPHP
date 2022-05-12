@@ -1,5 +1,4 @@
 <?php
-//technologies involved : PHP, POSTGRESQL DATABASE, HOSTGATOR - FTP SERVER, CSV FILE - EXCEL , FUNCTIONS fopen and fputcsv
 //first start connection with database *** primeiramente inicie conexão com o banco de dados
 //internal connection to database *** para conexão interna informe o host, porta, nome do banco, usuário e senha
 
