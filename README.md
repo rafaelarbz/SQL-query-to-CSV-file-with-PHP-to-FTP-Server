@@ -1,7 +1,7 @@
 > ## Português 
 > - Objetivo
 >   - Gerar um arquivo CSV com dados resultantes de uma consulta no banco de dados.
->   - Salvar arquivo CSV em uma pasta no servidor responsável por hospedar o site(neste caso o Hostgator). 
+>   - Salvar arquivo CSV em uma pasta no servidor responsável por hospedar o site (neste caso o Hostgator). 
 > - Tecnologias
 >   - PHP
 >   - PostgreSQL 
