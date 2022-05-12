@@ -1,7 +1,8 @@
 > ## Português
->> - Objetivo
->> - Tecnologias
+> - Objetivo
+>>> -
+> - Tecnologias
 
 > ## English
->> - Objective
->> - Technologies
+> - Objective
+> - Technologies
