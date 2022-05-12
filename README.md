@@ -1,5 +1,7 @@
 > ## Português
-> - Este Projeto 
+>> - Objetivo
+>> - Tecnologias
 
 > ## English
-> - This Project
+>> - Objective
+>> - Technologies
